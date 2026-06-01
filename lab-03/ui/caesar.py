@@ -9,15 +9,13 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-import os
-os.environ['QT_QPA_PLATFORM_PLUGIN_PATH'] = "../platforms"
 
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(500, 400)
-        MainWindow.setMinimumSize(QtCore.QSize(450, 380))
+        MainWindow.resize(500, 420)
+        MainWindow.setMinimumSize(QtCore.QSize(450, 400))
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setStyleSheet("\n"
 "     QWidget#centralwidget {\n"
@@ -32,7 +30,13 @@ class Ui_MainWindow(object):
 "         font-size: 20px;\n"
 "         font-weight: bold;\n"
 "         color: #000000;\n"
-"         margin-bottom: 5px;\n"
+"         margin-bottom: 2px;\n"
+"     }\n"
+"     QLabel#label_author {\n"
+"         font-size: 11px;\n"
+"         color: #555555;\n"
+"         font-style: italic;\n"
+"         margin-bottom: 8px;\n"
 "     }\n"
 "     QTextEdit, QLineEdit {\n"
 "         background-color: #ffffff;\n"
@@ -70,6 +74,10 @@ class Ui_MainWindow(object):
         self.label_title.setAlignment(QtCore.Qt.AlignCenter)
         self.label_title.setObjectName("label_title")
         self.verticalLayout.addWidget(self.label_title)
+        self.label_author = QtWidgets.QLabel(self.centralwidget)
+        self.label_author.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_author.setObjectName("label_author")
+        self.verticalLayout.addWidget(self.label_author)
         self.gridLayout = QtWidgets.QGridLayout()
         self.gridLayout.setHorizontalSpacing(15)
         self.gridLayout.setVerticalSpacing(10)
@@ -123,6 +131,7 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Caesar Cipher"))
         self.label_title.setText(_translate("MainWindow", "CAESAR CIPHER"))
+        self.label_author.setText(_translate("MainWindow", "Phạm Anh Duy - 2380600371"))
         self.label_plain.setText(_translate("MainWindow", "Plain Text:"))
         self.label_key.setText(_translate("MainWindow", "Key:"))
         self.label_cipher.setText(_translate("MainWindow", "CipherText:"))
