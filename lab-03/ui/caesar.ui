@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>420</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>450</width>
+    <height>400</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Caesar Cipher</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">
+     QWidget#centralwidget {
+         background-color: #ebebeb;
+     }
+     QLabel {
+         font-family: &quot;Segoe UI&quot;, Arial, sans-serif;
+         color: #000000;
+         font-size: 12px;
+     }
+     QLabel#label_title {
+         font-size: 20px;
+         font-weight: bold;
+         color: #000000;
+         margin-bottom: 2px;
+     }
+     QLabel#label_author {
+         font-size: 11px;
+         color: #555555;
+         font-style: italic;
+         margin-bottom: 8px;
+     }
+     QTextEdit, QLineEdit {
+         background-color: #ffffff;
+         border: 1px solid #adadad;
+         color: #000000;
+         font-family: &quot;Segoe UI&quot;, Arial, sans-serif;
+         font-size: 12px;
+         padding: 3px;
+     }
+     QPushButton {
+         background-color: #ffffff;
+         border: 1px solid #adadad;
+         border-radius: 5px;
+         padding: 4px 20px;
+         font-family: &quot;Segoe UI&quot;, Arial, sans-serif;
+         font-size: 12px;
+         color: #000000;
+         min-width: 80px;
+     }
+     QPushButton:hover {
+         background-color: #f0f0f0;
+         border: 1px solid #0078d7;
+     }
+     QPushButton:pressed {
+         background-color: #cce4f7;
+         border: 1px solid #005499;
+     }
+    </string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>12</number>
+    </property>
+    <property name="leftMargin">
+     <number>20</number>
+    </property>
+    <property name="topMargin">
+     <number>15</number>
+    </property>
+    <property name="rightMargin">
+     <number>20</number>
+    </property>
+    <property name="bottomMargin">
+     <number>15</number>
+    </property>
+    <item>
+     <widget class="QLabel" name="label_title">
+      <property name="text">
+       <string>CAESAR CIPHER</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_author">
+      <property name="text">
+       <string>Phạm Anh Duy - 2380600371</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QGridLayout" name="gridLayout">
+      <property name="verticalSpacing">
+       <number>10</number>
+      </property>
+      <property name="horizontalSpacing">
+       <number>15</number>
+      </property>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_plain">
+        <property name="text">
+         <string>Plain Text:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QTextEdit" name="txt_plain_text"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_key">
+        <property name="text">
+         <string>Key:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="txt_key"/>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_cipher">
+        <property name="text">
+         <string>CipherText:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QTextEdit" name="txt_cipher_text"/>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="spacing">
+       <number>100</number>
+      </property>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_encrypt">
+        <property name="text">
+         <string>Encrypt</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_decrypt">
+        <property name="text">
+         <string>Decrypt</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>500</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
